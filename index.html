@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CF Randomizer — Find Your Next Problem</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="shell">
+<header><div class="brand"><div class="logo">⌁</div>CF RANDOMIZER</div><div class="live">● CODEFORCES API</div></header>
+<section class="hero"><div class="eyebrow">Your next challenge awaits</div><h1>Stop scrolling.<br>Start solving.</h1><p>Get a random Codeforces problem matched to your rating range. One click, one challenge, zero overthinking.</p></section>
+<main class="layout">
+<section class="panel">
+<h2>⚙ &nbsp; Customize your practice</h2>
+<div class="field"><div class="field-head"><label>Problem rating range</label><small>800–3500</small></div><div class="range"><div class="input-wrap"><span>MIN</span><input id="minRating" type="number" min="800" max="3500" step="100" value="800"></div><div class="input-wrap"><span>MAX</span><input id="maxRating" type="number" min="800" max="3500" step="100" value="1200"></div></div><div class="hint">Choose the difficulty you want to practice.</div></div>
+<div class="field"><div class="field-head"><label>Tags <span style="color:#77869b;font-weight:400">(optional)</span></label><small>Comma-separated</small></div><input class="tags" id="tags" placeholder="e.g. dp, graphs, greedy"><div class="hint">Leave blank to include every topic. Tags match Codeforces problem tags.</div></div>
+<label class="checkrow"><input id="unrated" type="checkbox"> Include problems without a rating</label>
+<button class="primary" id="randomBtn">↗ &nbsp; Pick a random problem</button>
+<button class="secondary" id="resetBtn">Reset filters</button>
+<div class="status" id="status">Loading the Codeforces problemset…</div>
+</section>
+<section class="panel result">
+<div class="result-top"><span>Your next problem</span><div class="dice">✳</div></div>
+<div class="empty" id="empty"><div class="orbit">?</div><h3>Ready when you are</h3><p>Set your rating range and hit the button. Your next Codeforces problem will appear here.</p></div>
+<div class="problem" id="problem">
+<div class="eyebrow" id="problemCode">CODEFORCES PROBLEM</div><h2 class="problem-name" id="problemName"></h2>
+<div class="meta" id="meta"></div><div class="field-head"><label>TOPICS</label></div><div class="taglist" id="taglist"></div>
+<a class="openlink" id="openLink" href="#" target="_blank" rel="noopener noreferrer">Solve on Codeforces ↗</a>
+<div class="nextline" id="nextline">Pick another whenever you're ready.</div>
+</div>
+</section>
+</main>
+<div class="footer"><span>Problem data provided by Codeforces API.</span><a href="https://codeforces.com/problemset" target="_blank" rel="noopener">Browse full problemset ↗</a></div>
+</div>
+<script src="js/script.js" defer></script>
+</body>
+</html>
